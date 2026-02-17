@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>R Avinash | AI & ML Student</title>
+  <title>R Avinash | AI & ML Engineer</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -17,7 +17,7 @@
 
     body {
       background: #0f172a;
-      color: #5783dc;
+      color: #e2e8f0;
       scroll-behavior: smooth;
     }
 
@@ -36,8 +36,9 @@
     }
 
     nav h1 {
-      font-size: 1.5rem;
-      font-weight: 600;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #38bdf8;
     }
 
     nav ul {
@@ -48,8 +49,9 @@
 
     nav a {
       text-decoration: none;
-      color: #6983b7;
+      color: #cbd5e1;
       font-size: 0.95rem;
+      transition: 0.3s;
     }
 
     nav a:hover {
@@ -68,22 +70,28 @@
 
     .hero h2 {
       font-size: 3rem;
+      color: #38bdf8;
     }
 
     .hero p {
       margin: 15px 0;
-      max-width: 700px;
-      opacity: 0.9;
+      max-width: 750px;
+      opacity: 0.85;
     }
 
     .btn {
-      margin-top: 20px;
+      margin-top: 25px;
       padding: 12px 30px;
       background: #38bdf8;
       color: #020617;
       border-radius: 30px;
       text-decoration: none;
       font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0ea5e9;
     }
 
     .section {
@@ -96,36 +104,47 @@
 
     .section h2 {
       font-size: 2rem;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      color: #38bdf8;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
 
     .card {
-      background: #0f172a;
+      background: #1e293b;
       padding: 20px;
       border-radius: 14px;
       text-align: center;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #334155;
     }
 
     .list {
-      padding-left: 20px;
-      line-height: 1.8;
+      line-height: 1.9;
+    }
+
+    .project {
+      margin-bottom: 25px;
     }
 
     .project h3 {
       color: #38bdf8;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .links a {
       display: inline-block;
       margin-right: 20px;
-      margin-top: 10px;
+      margin-top: 15px;
       color: #38bdf8;
       text-decoration: none;
       font-weight: 500;
@@ -133,7 +152,7 @@
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 25px;
       font-size: 0.9rem;
       opacity: 0.7;
     }
@@ -159,9 +178,9 @@
     <h1>R Avinash</h1>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#objective">Objective</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -171,47 +190,34 @@
 <section class="hero">
   <h2>AI & ML Undergraduate</h2>
   <p>
-    Second-year B.Tech student specializing in Artificial Intelligence and Machine Learning,
-    building strong foundations in programming, problem-solving, and system fundamentals.
+    B.Tech student specializing in Artificial Intelligence & Machine Learning.
+    Certified in Oracle Cloud Infrastructure and AI Foundations.
+    Passionate about AI-driven systems, data analytics, cybersecurity, and scalable software engineering.
   </p>
   <a href="#contact" class="btn">Connect With Me</a>
 </section>
 
 <section id="about" class="section">
-  <h2>About Me</h2>
+  <h2>Professional Summary</h2>
   <p>
-    I am pursuing B.Tech in Artificial Intelligence and Machine Learning at Bannari Amman Institute of Technology.
-    I actively practice DSA and work with C, Python, MySQL, and client–server concepts.
+    Dedicated AI & ML student with hands-on experience in Python, SQL, cloud computing,
+    cybersecurity fundamentals, UX research, and AI-powered data analytics simulations.
+    Strong interest in solving real-world problems using intelligent systems.
   </p>
 </section>
 
-<section id="objective" class="section dark">
-  <h2>Objective</h2>
-  <p>
-    Seeking learning-focused internships and long-term growth in software and AI engineering,
-    with a strong emphasis on problem-solving, system fundamentals, and real-world application development.
-  </p>
-</section>
-
-<section id="skills" class="section">
+<section id="skills" class="section dark">
   <h2>Technical Skills</h2>
   <div class="grid">
-    <div class="card">C</div>
     <div class="card">Python</div>
-    <div class="card">MySQL</div>
+    <div class="card">C Programming</div>
+    <div class="card">SQL & DBMS</div>
+    <div class="card">Oracle Cloud (OCI)</div>
+    <div class="card">Exploratory Data Analysis</div>
+    <div class="card">Cybersecurity Basics</div>
+    <div class="card">UX Research</div>
     <div class="card">Git & GitHub</div>
-    <div class="card">Visual Studio Code</div>
-    <div class="card">Client–Server Basics</div>
   </div>
-</section>
-
-<section class="section dark">
-  <h2>Problem Solving</h2>
-  <ul class="list">
-    <li>Solved 83+ problems on LeetCode</li>
-    <li>MySQL: 49 problems</li>
-    <li>Python: 25 problems</li>
-  </ul>
 </section>
 
 <section id="education" class="section">
@@ -219,47 +225,47 @@
   <ul class="list">
     <li>
       <strong>B.Tech – Artificial Intelligence & Machine Learning</strong><br>
-      Bannari Amman Institute of Technology<br>
-      Expected Graduation: 2028 | CGPA: 5.7
+      Bannari Amman Institute of Technology (2024 – 2028)
     </li>
     <li>
-      <strong>Higher Secondary Certificate (HSC)</strong><br>
-      Karunya School<br>
-      Graduated: 2024 | Percentage: 70.2%
+      <strong>Higher Secondary Education</strong><br>
+      Karuya Christian School (2022 – 2024)
     </li>
   </ul>
 </section>
 
-<section class="section dark">
+<section id="certifications" class="section dark">
   <h2>Certifications</h2>
   <ul class="list">
-    <li>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</li>
     <li>Oracle Cloud Infrastructure 2025 Certified Foundations Associate</li>
+    <li>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</li>
+    <li>Cisco – Introduction to Cybersecurity</li>
+    <li>Cisco – Python Essentials 1</li>
+    <li>Forage – GenAI Powered Data Analytics</li>
+    <li>Forage – UX Design & Software Engineering Simulations</li>
   </ul>
 </section>
 
 <section id="projects" class="section">
   <h2>Projects</h2>
+
+  <div class="project">
+    <h3>Tollgate Management System</h3>
+    <p>Python & SQL based system with automated toll calculation and structured backend transaction handling.</p>
+  </div>
+
   <div class="project">
     <h3>LeetCode DSA Practice</h3>
-    <p>Continuous problem-solving to strengthen algorithmic thinking.</p>
+    <p>Solved 80+ problems to strengthen algorithmic thinking and problem-solving skills.</p>
   </div>
-  <div class="project">
-    <h3>CFX.re Beginner Scripts</h3>
-    <p>Simple experimental FiveM scripts to learn gameplay logic and event handling.</p>
-  </div>
+
 </section>
 
-<section class="section dark">
-  <h2>Target Companies</h2>
-  <p>Google · Microsoft · Amazon · NVIDIA · Intel · AMD</p>
-</section>
-
-<section id="contact" class="section">
+<section id="contact" class="section dark">
   <h2>Contact</h2>
-  <p>India</p>
-  <p>Email: ravinash.al24@bitsathy.ac.in</p>
+  <p>Ooty, Tamil Nadu, India</p>
   <p>Email: avi4777747@gmail.com</p>
+
   <div class="links">
     <a href="https://github.com/Avinash-7-26" target="_blank">GitHub</a>
     <a href="https://leetcode.com/u/R_Avinash/" target="_blank">LeetCode</a>
@@ -268,7 +274,7 @@
 </section>
 
 <footer>
-  © 2025 R Avinash | Built with HTML & CSS
+  © 2026 R Avinash | AI & ML Portfolio
 </footer>
 
 </body>
