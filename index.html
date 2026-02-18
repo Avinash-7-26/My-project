@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>R Avinash | AI & ML Engineer</title>
+  <title>R Avinash | AI & ML Student</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     * {
@@ -16,157 +17,214 @@
     }
 
     body {
-      background: #0f172a;
+      background: #0a0e17;
       color: #e2e8f0;
-      scroll-behavior: smooth;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Animated Gradient Background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(45deg, #0f172a, #1e293b, #334155, #0ea5e9, #38bdf8);
+      background-size: 300% 300%;
+      animation: gradientFlow 18s ease infinite;
+      opacity: 0.15;
+      z-index: -2;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     header {
-      padding: 20px 60px;
-      position: sticky;
+      position: fixed;
       top: 0;
-      background: #0f172a;
-      z-index: 100;
+      width: 100%;
+      padding: 20px 5%;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(56, 189, 248, 0.1);
     }
 
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     nav h1 {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #38bdf8;
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     nav ul {
-      list-style: none;
       display: flex;
-      gap: 25px;
+      gap: 2.5rem;
+      list-style: none;
     }
 
     nav a {
-      text-decoration: none;
       color: #cbd5e1;
-      font-size: 0.95rem;
-      transition: 0.3s;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.4s ease;
+      position: relative;
     }
 
-    nav a:hover {
-      color: #38bdf8;
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -6px;
+      left: 0;
+      background: #38bdf8;
+      transition: width 0.4s ease;
     }
+
+    nav a:hover::after { width: 100%; }
+    nav a:hover { color: #38bdf8; }
 
     .hero {
-      min-height: 90vh;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 0 20px;
+      padding: 0 5%;
+      position: relative;
     }
 
     .hero h2 {
-      font-size: 3rem;
-      color: #38bdf8;
+      font-size: 4.5rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, #38bdf8, #a78bfa, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.5rem;
+      animation: textGlow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes textGlow {
+      from { text-shadow: 0 0 10px rgba(56,189,248,0.5); }
+      to   { text-shadow: 0 0 30px rgba(167,139,250,0.8), 0 0 50px rgba(244,114,182,0.4); }
     }
 
     .hero p {
-      margin: 15px 0;
-      max-width: 750px;
-      opacity: 0.85;
+      font-size: 1.3rem;
+      max-width: 800px;
+      opacity: 0.9;
+      margin-bottom: 2.5rem;
     }
 
     .btn {
-      margin-top: 25px;
-      padding: 12px 30px;
-      background: #38bdf8;
-      color: #020617;
-      border-radius: 30px;
-      text-decoration: none;
+      padding: 16px 40px;
+      background: linear-gradient(45deg, #38bdf8, #0ea5e9);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
       font-weight: 600;
-      transition: 0.3s;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(56,189,248,0.4);
+      transition: all 0.4s ease;
     }
 
     .btn:hover {
-      background: #0ea5e9;
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(56,189,248,0.6);
     }
 
     .section {
-      padding: 80px 60px;
-    }
-
-    .dark {
-      background: #020617;
+      padding: 120px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
     }
 
     .section h2 {
-      font-size: 2rem;
-      margin-bottom: 25px;
-      color: #38bdf8;
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 4rem;
+      background: linear-gradient(90deg, #38bdf8, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
     }
 
     .card {
-      background: #1e293b;
-      padding: 20px;
-      border-radius: 14px;
+      background: rgba(30, 41, 59, 0.6);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(56,189,248,0.15);
+      border-radius: 20px;
+      padding: 2.5rem 1.8rem;
       text-align: center;
-      font-weight: 500;
-      transition: 0.3s;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      background: #334155;
+      transform: translateY(-15px) scale(1.05);
+      box-shadow: 0 25px 50px rgba(56,189,248,0.25);
+      border-color: #38bdf8;
     }
 
-    .list {
-      line-height: 1.9;
-    }
+    .card i { font-size: 3rem; color: #38bdf8; margin-bottom: 1.2rem; }
 
-    .project {
-      margin-bottom: 25px;
-    }
-
-    .project h3 {
-      color: #38bdf8;
-      margin-bottom: 6px;
+    .project, .list li {
+      background: rgba(30,41,59,0.4);
+      padding: 1.8rem;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+      border-left: 4px solid #38bdf8;
     }
 
     .links a {
-      display: inline-block;
-      margin-right: 20px;
-      margin-top: 15px;
+      margin: 0 1.2rem;
       color: #38bdf8;
-      text-decoration: none;
-      font-weight: 500;
+      font-size: 1.4rem;
+      transition: 0.3s;
     }
+
+    .links a:hover { color: #a78bfa; transform: scale(1.3); }
 
     footer {
       text-align: center;
-      padding: 25px;
-      font-size: 0.9rem;
-      opacity: 0.7;
+      padding: 3rem 5%;
+      background: rgba(15,23,42,0.8);
+      border-top: 1px solid rgba(56,189,248,0.1);
+      font-size: 0.95rem;
     }
 
     @media (max-width: 768px) {
-      header {
-        padding: 20px;
-      }
-      .section {
-        padding: 60px 20px;
-      }
-      .hero h2 {
-        font-size: 2.3rem;
-      }
+      .hero h2 { font-size: 3rem; }
+      nav ul { gap: 1.2rem; font-size: 0.9rem; }
+      .section { padding: 80px 5%; }
     }
   </style>
 </head>
@@ -188,95 +246,102 @@
 </header>
 
 <section class="hero">
-  <h2>AI & ML Undergraduate</h2>
+  <h2>AI & ML Student</h2>
   <p>
-    B.Tech student specializing in Artificial Intelligence & Machine Learning.
-    Certified in Oracle Cloud Infrastructure and AI Foundations.
-    Passionate about AI-driven systems, data analytics, cybersecurity, and scalable software engineering.
+    B.Tech AI & ML • Oracle Certified • Passionate about Intelligent Systems, Data Analytics, Cybersecurity & Scalable Engineering
   </p>
-  <a href="#contact" class="btn">Connect With Me</a>
+  <a href="#contact" class="btn">Let's Connect</a>
 </section>
 
 <section id="about" class="section">
   <h2>Professional Summary</h2>
-  <p>
-    Dedicated AI & ML student with hands-on experience in Python, SQL, cloud computing,
-    cybersecurity fundamentals, UX research, and AI-powered data analytics simulations.
-    Strong interest in solving real-world problems using intelligent systems.
+  <p style="max-width:900px; margin:0 auto; font-size:1.2rem; text-align:center;">
+    Dedicated undergraduate specializing in Artificial Intelligence & Machine Learning with hands-on experience in Python, cloud infrastructure, data exploration, cybersecurity fundamentals, and UX simulations. Building intelligent solutions for real-world challenges.
   </p>
 </section>
 
-<section id="skills" class="section dark">
+<section id="skills" class="section">
   <h2>Technical Skills</h2>
   <div class="grid">
-    <div class="card">Python</div>
-    <div class="card">C Programming</div>
-    <div class="card">SQL & DBMS</div>
-    <div class="card">Oracle Cloud (OCI)</div>
-    <div class="card">Exploratory Data Analysis</div>
-    <div class="card">Cybersecurity Basics</div>
-    <div class="card">UX Research</div>
-    <div class="card">Git & GitHub</div>
+    <div class="card"><i class="fab fa-python"></i><p>Python</p></div>
+    <div class="card"><i class="fas fa-code"></i><p>C Programming</p></div>
+    <div class="card"><i class="fas fa-database"></i><p>SQL & DBMS</p></div>
+    <div class="card"><i class="fas fa-cloud"></i><p>Oracle Cloud (OCI)</p></div>
+    <div class="card"><i class="fas fa-chart-line"></i><p>Exploratory Data Analysis</p></div>
+    <div class="card"><i class="fas fa-shield-alt"></i><p>Cybersecurity Basics</p></div>
+    <div class="card"><i class="fas fa-user-friends"></i><p>UX Research</p></div>
+    <div class="card"><i class="fab fa-github"></i><p>Git & GitHub</p></div>
   </div>
 </section>
 
 <section id="education" class="section">
   <h2>Education</h2>
-  <ul class="list">
-    <li>
-      <strong>B.Tech – Artificial Intelligence & Machine Learning</strong><br>
-      Bannari Amman Institute of Technology (2024 – 2028)
-    </li>
-    <li>
-      <strong>Higher Secondary Education</strong><br>
-      Karuya Christian School (2022 – 2024)
-    </li>
-  </ul>
+  <div class="project">
+    <h3>B.Tech – Artificial Intelligence & Machine Learning</h3>
+    <p>Bannari Amman Institute of Technology (2024 – 2028)</p>
+  </div>
+  <div class="project">
+    <h3>Higher Secondary Education</h3>
+    <p>Karunya Christian School (2022 – 2024)</p>
+  </div>
 </section>
 
-<section id="certifications" class="section dark">
+<section id="certifications" class="section">
   <h2>Certifications</h2>
-  <ul class="list">
-    <li>Oracle Cloud Infrastructure 2025 Certified Foundations Associate</li>
-    <li>Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate</li>
-    <li>Cisco – Introduction to Cybersecurity</li>
-    <li>Cisco – Python Essentials 1</li>
-    <li>Forage – GenAI Powered Data Analytics</li>
-    <li>Forage – UX Design & Software Engineering Simulations</li>
+  <ul class="list" style="max-width:900px; margin:0 auto;">
+    <li class="project"><strong>Oracle Cloud Infrastructure 2025 Foundations Associate</strong></li>
+    <li class="project"><strong>Oracle Cloud Infrastructure 2025 AI Foundations Associate</strong></li>
+    <li class="project">Cisco – Introduction to Cybersecurity</li>
+    <li class="project">Cisco – Python Essentials 1</li>
+    <li class="project">Forage – GenAI Powered Data Analytics</li>
+    <li class="project">Forage – UX Design & Software Engineering Simulations</li>
   </ul>
 </section>
 
 <section id="projects" class="section">
   <h2>Projects</h2>
-
   <div class="project">
     <h3>Tollgate Management System</h3>
-    <p>Python & SQL based system with automated toll calculation and structured backend transaction handling.</p>
+    <p>Python & SQL powered automated toll calculation with secure backend transaction management.</p>
   </div>
-
   <div class="project">
     <h3>LeetCode DSA Practice</h3>
-    <p>Solved 80+ problems to strengthen algorithmic thinking and problem-solving skills.</p>
+    <p>80+ problems solved – strengthening algorithms, data structures & problem-solving efficiency.</p>
   </div>
-
 </section>
 
-<section id="contact" class="section dark">
-  <h2>Contact</h2>
-  <p>Ooty, Tamil Nadu, India</p>
-  <p>Email(Offical): avi4777747@gmail.com</p>
-  <p>Email(College): ravinash.al24@bitsathy.ac.in</p>
-
-  <div class="links">
-    <a href="https://github.com/Avinash-7-26" target="_blank">GitHub</a>
-    <a href="https://leetcode.com/u/R_Avinash/" target="_blank">LeetCode</a>
-    <a href="https://www.linkedin.com/in/r-avinash-455b7636b/" target="_blank">LinkedIn</a>
+<section id="contact" class="section">
+  <h2>Get In Touch</h2>
+  <p style="text-align:center; font-size:1.2rem; margin-bottom:2rem;">
+    Ooty, Tamil Nadu, India<br>
+    Official Email: avi4777747@gmail.com<br>
+    College Email: ravinash.al24@bitsathy.ac.in
+  </p>
+  <div class="links" style="text-align:center;">
+    <a href="https://github.com/Avinash-7-26" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://leetcode.com/u/R_Avinash/" target="_blank"><i class="fas fa-code-branch"></i></a>
+    <a href="https://www.linkedin.com/in/r-avinash-455b7636b/" target="_blank"><i class="fab fa-linkedin"></i></a>
   </div>
 </section>
 
 <footer>
-  © 2026 R Avinash | AI & ML Portfolio
+  © 2026 R Avinash | Building the Future with AI & ML
 </footer>
+
+<script>
+// Fade-in animation on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.card, .project').forEach(el => {
+  observer.observe(el);
+});
+</script>
 
 </body>
 </html>
